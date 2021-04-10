@@ -1,0 +1,1 @@
+clang++  -g -O0 -g -std=c++17   CMakeFiles/net_client.dir/src/SimpleClient.cpp.o  -o net_client  -lpthread 

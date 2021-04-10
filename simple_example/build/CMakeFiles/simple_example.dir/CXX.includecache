@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/simple_example/src/SimpleExample.cpp
+iostream
+-
+chrono
+-
+asio.hpp
+-
+asio/ts/buffer.hpp
+-
+asio/ts/internet.hpp
+-
+

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/build",
+  "command": "clang++   -I\"/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/include\"  -g -O0 -g -std=c++17   -o CMakeFiles/net_client.dir/src/SimpleClient.cpp.o -c \"/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/SimpleClient.cpp\"",
+  "file": "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/SimpleClient.cpp"
+},
+{
+  "directory": "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/build",
+  "command": "clang++   -I\"/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/include\"  -g -O0 -g -std=c++17   -o CMakeFiles/net_server.dir/src/SimpleServer.cpp.o -c \"/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/SimpleServer.cpp\"",
+  "file": "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/SimpleServer.cpp"
+}
+]

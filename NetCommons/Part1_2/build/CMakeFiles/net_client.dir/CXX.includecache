@@ -1,0 +1,72 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/net_client.h
+net_common.h
+../include/net_common.h
+net_connection.h
+../include/net_connection.h
+net_tsqueue.h
+../include/net_tsqueue.h
+
+../include/net_common.h
+memory
+-
+thread
+-
+mutex
+-
+deque
+-
+optional
+-
+vector
+-
+iostream
+-
+algorithm
+-
+chrono
+-
+cstdint
+-
+asio.hpp
+-
+asio/ts/buffer.hpp
+-
+asio/ts/internet.hpp
+-
+
+../include/net_connection.h
+net_common.h
+../include/net_common.h
+net_message.h
+../include/net_message.h
+net_tsqueue.h
+../include/net_tsqueue.h
+
+../include/net_message.h
+net_common.h
+../include/net_common.h
+
+../include/net_tsqueue.h
+net_common.h
+../include/net_common.h
+net_message.h
+../include/net_message.h
+
+/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/SimpleClient.cpp
+iostream
+-
+net_message.h
+/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/net_message.h
+net_common.h
+/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/net_common.h
+net_client.h
+/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/net_client.h
+
