@@ -16,7 +16,7 @@ enum class CustomMsgTypes : uint32_t
 class CustomClient : public olc::net::client_interface<CustomMsgTypes>
 {
 public:
-	void PingServer()
+	void PingServer(const int &msg_id)
 	{
 		std::cout << "Ping Server\n";
 		olc::net::message<CustomMsgTypes> msg;
@@ -25,13 +25,13 @@ public:
 		std::chrono::system_clock::time_point timenow = \
 			std::chrono::system_clock::now();
 
+		msg << msg_id;
 		msg << timenow;
+		Send(msg);
 
 		#ifdef __DEBUG_OUT__
 			std::cout << "msg body size = " << msg.header.size << '\n';
 		#endif
-
-		Send(msg);
 	}
 
 
@@ -49,6 +49,7 @@ public:
 int main(int argc, char *argv[]) 
 {
 	char ch;
+	int msg_id = 0;
 	bool bQuit = false;
 	CustomClient c;
 	c.Connect("127.0.0.1", 6000);
@@ -56,7 +57,7 @@ int main(int argc, char *argv[])
 	while (!bQuit)
 	{
 		std::cin >> ch;
-		if (ch == 'p') c.PingServer();
+		if (ch == 'p') c.PingServer(msg_id++);
 		if (ch == 'a') c.MessageAll();
 
 		if (c.IsConnected())
@@ -75,13 +76,24 @@ int main(int argc, char *argv[])
 
 					case CustomMsgTypes::ServerPing:
 					{
-						std::chrono::system_clock::time_point timenow = \
-							std::chrono::system_clock::now();
+						//std::chrono::system_clock::time_point timenow = \
+						//	std::chrono::system_clock::now();
 
-						std::chrono::system_clock::time_point timethen;
-						msg >> timethen;
+						//std::chrono::system_clock::time_point timethen;
+						//msg >> timethen;
 
-						std::cout << "Ping: " << std::chrono::duration<double>(timenow - timethen).count() << '\n'; 
+						//std::cout << "Ping: " << std::chrono::duration<double>(timenow - timethen).count() << '\n'; 
+
+
+						// modified
+						std::chrono::system_clock::time_point time_send;
+						std::chrono::system_clock::time_point time_then;
+						int id;
+						msg >> time_then;
+						msg >> time_send;
+						msg >> id;
+						std::cout << "Message [" << id << "]" <<" take " << \
+							std::chrono::duration<double>(time_then - time_send).count() << " seconds to server\n";
 					}
 					break;
 

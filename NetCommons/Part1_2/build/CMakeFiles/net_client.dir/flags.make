@@ -6,5 +6,5 @@ CXX_FLAGS = -g -O0 -g -std=c++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/include" 
+CXX_INCLUDES = -I"/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/Part1_2/include" 
 

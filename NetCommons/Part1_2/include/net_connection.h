@@ -74,7 +74,10 @@ namespace olc
 						[this](std::error_code ec, asio::ip::tcp::endpoint endpoint)
 						{
 							if (!ec)
-							{
+							{	
+								/*
+									一旦连接成功，这个回调函数就会被执行，注册读报文头事件到上下文中
+								*/
 								this->ReadHeader();
 							}
 						}
@@ -156,7 +159,7 @@ namespace olc
 							if (this->m_msgTemporaryIn.header.size > 0)
 							{
 								// 从读取到的数据头中可以得到这个数据包的主体部分的长度，因此我们需要初始化暂存区域的大小
-								// 以及向上下文注册读取主体部分。
+								// 以及向 上下文 注册读取主体部分。
 								this->m_msgTemporaryIn.body.resize(this->m_msgTemporaryIn.header.size);
 								#ifdef __DEBUG_OUT__
 									std::cout << "add read body into context\n";
@@ -284,7 +287,7 @@ namespace olc
 					this->m_qMessagesIn.push_back( { this->shared_from_this(), m_msgTemporaryIn } );
 				else 
 					this->m_qMessagesIn.push_back( { nullptr, m_msgTemporaryIn } );
-
+				// 完成了一个完整的数据包的接收过程，此时重新将读取报文事件注册到 上下文(context) 当中
 				this->ReadHeader();
 			}
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/src/SimpleServer.cpp" "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/build/CMakeFiles/net_server.dir/src/SimpleServer.cpp.o"
+  "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/Part1_2/src/SimpleServer.cpp" "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/Part1_2/build/CMakeFiles/net_server.dir/src/SimpleServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

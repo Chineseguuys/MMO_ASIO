@@ -82,7 +82,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/home/yjh/MYSOFTWARE/boost_1_75/include;/home/yjh/MYSOFTWARE/c_ares/include;/home/yjh/MYSOFTWARE/libtorch_cplusplus/include/torch/csrc/api/include;/home/yjh/MYSOFTWARE/libtorch_cplusplus/include;/home/yjh/MYSOFTWARE/miniconda3/include/python3.7m;/home/yjh/MYSOFTWARE/SFML-2.5.1/include;/home/yjh/MYSOFTWARE/protobuf_3_15_6/include;/home/yjh/MYSOFTWARE/wxwidgets_3_1_4/include/wx-3.1;/home/yjh/MYSOFTWARE/asio_1_18/asio/include;/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/home/yjh/MYSOFTWARE/boost_1_75/include;/home/yjh/MYSOFTWARE/c_ares/include;/home/yjh/MYSOFTWARE/libtorch_cplusplus/include/torch/csrc/api/include;/home/yjh/MYSOFTWARE/libtorch_cplusplus/include;/home/yjh/MYSOFTWARE/miniconda3/include/python3.7m;/home/yjh/MYSOFTWARE/SFML-2.5.1/include;/home/yjh/MYSOFTWARE/protobuf_3_15_6/include;/home/yjh/MYSOFTWARE/wxwidgets_3_1_4/include/wx-3.1;/home/yjh/MYSOFTWARE/asio_1_18/asio/include;/home/yjh/MYSOFTWARE/getopt_1_0_0;/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/home/yjh/MYSOFTWARE/boost_1_75/lib;/home/yjh/MYSOFTWARE/libtorch_cplusplus/lib;/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

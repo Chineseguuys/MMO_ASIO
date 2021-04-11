@@ -149,8 +149,9 @@ namespace olc
 			void Update(size_t nMaxMessages = -1) 
 			{
 				size_t nMessageCount = 0;
-				//debug
-				std::cout << "server message in : " << m_qMessageIn.count() << '\n';
+				#ifdef __DEBUG_OUT__
+					//std::cout << "server message in : " << m_qMessageIn.count() << '\n';
+				#endif
 				while (nMessageCount < nMaxMessages && !m_qMessageIn.empty())
 				{
 					auto msg = m_qMessageIn.pop_front();
@@ -163,6 +164,7 @@ namespace olc
 
 		protected:
 			// 是否接受一个客户端的连接
+			// 具体的客户端类，应当重载这个方法
 			virtual bool OnClientConnect(std::shared_ptr<connection<T> > client)
 			{
 				return false;

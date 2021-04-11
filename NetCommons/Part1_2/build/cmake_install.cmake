@@ -1,4 +1,4 @@
-# Install script for directory: /home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons
+# Install script for directory: /home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/Part1_2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yjh/Nutstore Files/Code_for_linux/C++Primer/MMO_ASIO/NetCommons/Part1_2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

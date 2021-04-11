@@ -6,6 +6,7 @@
 
 using namespace std::chrono_literals;	// using for ms, s, us
 
+//std::vector<char> vBuffer(2 * 1024);
 std::vector<char> vBuffer(1 * 1024);
 
 void GrabSomeData(asio::ip::tcp::socket &socket) 
@@ -23,7 +24,7 @@ void GrabSomeData(asio::ip::tcp::socket &socket)
 			for (int i = 0; i < length; ++i)
 				std::cout << vBuffer[i];
 
-			GrabSomeData(socket);
+			GrabSomeData(socket); // the key of ansync 
 		}
 	}
 	);
@@ -51,7 +52,7 @@ int main(int argc, char *argv[])
 	asio::ip::tcp::endpoint endpoint(asio::ip::make_address("51.38.81.49", ec), 80);
 
 	// clash 使用的 socket 端口为本地的 2341 端口，因此可以连接成功
-	//asio::ip::tcp::endpoint endpoint(asio::ip::make_address("127.0.0.1", ec), 4000);
+	//asio::ip::tcp::endpoint endpoint(asio::ip::make_address("127.0.0.1", ec), 2341);
 
 	// 创建一个 socket 
 	asio::ip::tcp::socket socket(context);
@@ -83,7 +84,9 @@ int main(int argc, char *argv[])
 		/**
 		socket.wait(socket.wait_read);
 
-		size_t bytes = socket.available(); // 非阻塞，在发出请求后立刻执行读取，一般都会返回 0 
+		size_t bytes = socket.available(); 
+		// 非阻塞,在刚刚发送数据请求之后，马上进行读取，往往返回的是 0（服务器还没有收到请求或者返回数据） 
+		// 所以才在上面使用了阻塞式的 socket.wait() 函数来等待数据到达
 		std::cout << "Bytes Avaliable : " << bytes << std::endl;
 
 		if (bytes > 0) 
@@ -94,7 +97,7 @@ int main(int argc, char *argv[])
 				std::cout << c;
 		}
 		*/
-		std::this_thread::sleep_for(5000ms);
+		std::this_thread::sleep_for(10000ms); // 主线程睡眠 10s 
 
 		// stop() 会删除 context io 上下文当中的所有的事件任务，并停止事件循环
 		context.stop();
